@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/melo/header.html %>
+    <script type="text/javascript" src="assets/js/demo/charts.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_bars_horizontal.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_bars_vertical.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_donut.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_filled_blue.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_filled_green.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_filled_red.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_multiple.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_pie.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_simple.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_updating.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_widget.js"></script>
+    <script type="text/javascript" src="assets/js/demo/charts/chart_selection_zooming.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<% include partials/melo/navbar.html %>
+
+<div id="container">
+<% include partials/melo/sidebar.html %>
+<!-- /Sidebar -->
+
+<div id="content">
+<div class="container">
+<!-- Breadcrumbs line -->
+<% include partials/melo/crumbs.html %>
+<!-- /Breadcrumbs line -->
+
+<!--=== Page Header ===-->
+<div class="page-header">
+    <div class="page-title">
+        <h3>图标和分析数据</h3>
+        <span>早上好，刘博士</span>
+    </div>
+
+    <!-- Page Stats -->
+    <ul class="page-stats">
+        <li>
+            <div class="summary">
+                <span>新的订单</span>
+                <h3>17,561</h3>
+            </div>
+            <div id="sparkline-bar" class="graph sparkline hidden-xs">20,15,8,50,20,40,20,30,20,15,30,20,25,20</div>
+            <!-- Use instead of sparkline e.g. this:
+            <div class="graph circular-chart" data-percent="73">73%</div>
+            -->
+        </li>
+        <li>
+            <div class="summary">
+                <span>我的余额</span>
+                <h3>$21,561.21</h3>
+            </div>
+            <div id="sparkline-bar2" class="graph sparkline hidden-xs">20,15,8,50,20,40,20,30,20,15,30,20,25,20</div>
+        </li>
+    </ul>
+    <!-- /Page Stats -->
+</div>
+<!-- /Page Header -->
+
+<!--=== Page Content ===-->
+<!--=== Widget Chart ===-->
+<div class="row">
+    <div class="col-md-12">
+        <div class="widget box">
+            <div class="widget-chart"> <!-- Possible colors: widget-chart-blue, widget-chart-blueLight (standard), widget-chart-green, widget-chart-red, widget-chart-yellow, widget-chart-orange, widget-chart-purple, widget-chart-gray -->
+                <div id="chart_widget" class="chart chart-medium"></div>
+            </div>
+            <div class="widget-content">
+                <ul class="stats"> <!-- .no-dividers -->
+                    <li>
+                        <strong>4,853</strong>
+                        <small>总览</small>
+                    </li>
+                    <li class="light">
+                        <strong>271</strong>
+                        <small>最近的24个小时</small>
+                    </li>
+                    <li>
+                        <strong>1,025</strong>
+                        <small>每个实验人员</small>
+                    </li>
+                    <li class="light">
+                        <strong>105</strong>
+                        <small>最近的24个小时</small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Widget Chart -->
+
+<!--=== Multiple Statistics ===-->
+<div class="row">
+    <div class="col-md-12">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Multiple Statistics</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div id="chart_multiple" class="chart"></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="progress-stats">
+                            <span class="title"><i class="icon-puzzle-piece"></i> Puzzles Completed <span>30/50</span></span>
+                            <div class="progress progress-mini progress-striped">
+                                <div class="progress-bar progress-bar-info" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-stats">
+                            <span class="title"><i class="icon-cloud-download"></i> Downloads <span>42/128 MB</span></span>
+                            <div class="progress progress-mini progress-success progress-striped">
+                                <div class="progress-bar progress-bar-success" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-stats">
+                            <span class="title"><i class="icon-cloud"></i> Space <span>2961/4096 MB</span></span>
+                            <div class="progress progress-mini progress-warning progress-striped">
+                                <div class="progress-bar progress-bar-warning" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="spacing-10px"></div>
+                        <button type="button" class="btn btn-block btn-primary">Generate Report</button>
+                        <button type="button" class="btn btn-block btn-danger">Cancel Account</button>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="widget-content">
+                <ul class="stats no-dividers">
+                    <li class="circular-chart-inline">
+                        <div class="circular-chart" data-percent="27" data-size="90">27%</div>
+                        <span class="description">Server Load</span>
+                    </li>
+                    <li class="circular-chart-inline">
+                        <div class="circular-chart" data-percent="75" data-size="90" data-bar-color="#e25856">75%</div>
+                        <span class="description">Used RAM</span>
+                    </li>
+                    <li class="circular-chart-inline">
+                        <div class="circular-chart" data-percent="10" data-size="90" data-bar-color="#8fc556">281 MB</div>
+                        <span class="description">Space</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Multiple Statistics -->
+
+<!--=== Selection and Zooming ===-->
+<div class="row">
+    <div class="col-md-12">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Selection and Zooming</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="chart_selection_zooming" class="chart"></div>
+            </div>
+            <div class="divider"></div>
+            <div class="widget-content widget-deeper">
+                <div id="chart_selection_zooming_overview" class="chart chart-small"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Selection and Zooming -->
+
+<!--=== Simple Chart ===-->
+<div class="row">
+    <div class="col-md-6">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Simple Chart</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="chart_simple" class="chart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Auto Updating Chart</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="chart_updating" class="chart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Simple Chart -->
+
+<!--=== Filled Charts ===-->
+<div class="row">
+    <div class="col-md-4">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Filled Chart (Green)</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="chart_filled_green" class="chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Filled Chart (Red)</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="chart_filled_red" class="chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Filled Chart (Blue)</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="chart_filled_blue" class="chart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Filled Charts -->
+
+<!--=== Bars ===-->
+<div class="row">
+    <div class="col-md-6">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Vertical Bars</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="chart_bars_vertical" class="chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Horizontal Bars</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="chart_bars_horizontal" class="chart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Bars -->
+
+<!--=== Donut/ Pie ===-->
+<div class="row">
+    <div class="col-md-6">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Donut Chart</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="chart_donut" class="chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Pie Chart</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div id="chart_pie" class="chart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Donut/ Pie -->
+
+<!--=== Circular Charts ===-->
+<div class="row">
+    <div class="col-md-12">
+        <div class="widget box">
+            <div class="widget-header">
+                <h4><i class="icon-reorder"></i> Circular Charts</h4>
+                <div class="toolbar no-padding">
+                    <div class="btn-group">
+                        <span class="btn btn-xs circular-charts-reload"><i class="icon-refresh"></i> Reload</span>
+                        <span class="btn btn-xs widget-collapse"><i class="icon-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <ul class="stats">
+                    <li>
+                        <div class="circular-chart demo-reload" data-percent="62"><span>62</span>%</div>
+                        <a href="javascript:void(0);" class="title">Used RAM <i class="icon-angle-right"></i></a>
+                    </li>
+                    <li>
+                        <div class="circular-chart demo-reload" data-percent="80" data-bar-color="#e25856">-<span>80</span>%</div>
+                        <a href="javascript:void(0);" class="title">Bounce Rate <i class="icon-angle-right"></i></a>
+                    </li>
+                    <li>
+                        <div class="circular-chart demo-reload" data-percent="26" data-bar-color="#8fc556"><span>26</span>%</div>
+                        <a href="javascript:void(0);" class="title">New Visitors <i class="icon-angle-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="divider"></div>
+            <div class="widget-content">
+                <ul class="stats">
+                    <li class="circular-chart-inline">
+                        <div class="circular-chart demo-reload" data-percent="62"><span>62</span>%</div>
+                        <a href="javascript:void(0);" class="description">Used RAM <i class="icon-angle-right"></i></a>
+                    </li>
+                    <li class="circular-chart-inline">
+                        <div class="circular-chart demo-reload" data-percent="80" data-bar-color="#e25856">-<span>80</span>%</div>
+                        <a href="javascript:void(0);" class="description">Bounce Rate <i class="icon-angle-right"></i></a>
+                    </li>
+                    <li class="circular-chart-inline">
+                        <div class="circular-chart demo-reload" data-percent="26" data-bar-color="#8fc556"><span>26</span>%</div>
+                        <a href="javascript:void(0);" class="description">New Visitors <i class="icon-angle-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Circular Charts -->
+<!-- /Page Content -->
+</div>
+<!-- /.container -->
+
+</div>
+</div>
+
+</body>
+</html>

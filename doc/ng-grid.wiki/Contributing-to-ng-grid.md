@@ -1,0 +1,3 @@
+Right now we only have two developers actively working on this project. So, if you have an idea, question, comment, or would like to contribute code, just ask! We welcome all input from the community 
+
+If you would like to contribute, just fork the project, make some changes and submit a pull request! That simple... If we like your idea, we will merge it into the code base (typically on a new branch), test it, and if it works as expected, we will put it into a future release. 

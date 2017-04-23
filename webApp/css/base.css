@@ -1,0 +1,79 @@
+html,
+body{
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+}
+
+.footer-container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -150px;/*margin-bottom的负值等于footer高度*/
+}
+.push,
+.footer {
+    height: 60px;
+    clear:both;
+}
+.footer{ width:90%; margin:30px auto 20px auto; overflow:hidden;border-top:1px #ccc dotted;}
+.footer div{ line-height:20px; text-align:center; margin-top: 5px}
+.footer div a{ padding:0 5px;}
+
+.homePage {
+/*color: #cdbfe3;*/
+  background-color: #4a7c76;
+	height: 100%;
+	text-align: center;
+	padding-top: 140px;
+	padding-bottom: 140px;
+}
+
+/*.homeBackground {
+	background-image: url(../background/background5.jpg);
+}
+*/
+.loginHtml {
+	min-width: 300px;
+	width: 400px;
+	height: 400px;
+	margin: 60px auto;
+    text-align: left;
+}
+
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 100%; 
+    height: 800px;
+}
+.big_logo_iframe {
+    width: 400px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: 0 0;
+    border-style:none;
+}
+.big_logo{
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.searchControl{
+    margin-top: 40px;
+    width: 680px;
+    height: 450px;
+}
+.structure_search_iframe {
+    /*padding: 10px;*/
+    width: 800px;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: 0 0;
+    border-style:none
+}
+/*.modal { display: block; }*/

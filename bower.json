@@ -1,0 +1,29 @@
+{
+  "name": "chembuyer",
+  "version": "0.0.1",
+  "main": "webApp/css/base.css",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bowerLib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.9",
+    "angular-ui": "latest",
+    "angular-route": "latest",
+    "angular-resource": "latest",
+    "ng-grid": "latest",
+    "requirejs": "latest",
+    "requirejs-text": "latest",
+    "respond": "latest",
+    "underscore":"latest",
+    "requirejs-i18n":"latest"
+  },
+  "authors": [
+    "Yin Shen <shenyin@rocketmail.com>"
+  ],
+  "description": "chembuyer is a website",
+  "license": "MIT"
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app='searchApp'>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ChemBuyer,Base on Nodejs, 化学试剂采购">
+    <meta name="keywords" content="HTML5, nodejs, 化学试剂采购">
+    <title>
+        化学采购
+    </title>
+    <link href='../css/normalize.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../bower_lib/ng-grid/ng-grid.css"/>
+    <link href='../flatUI/bootstrap/css/bootstrap.css' rel='stylesheet' type='text/css'>
+    <link href='../flatUI/bootstrap/css/prettify.css' rel='stylesheet' type='text/css'>
+    <link href='../flatUI/css/flat-ui.css' rel='stylesheet' type='text/css'>
+    <link href="../css/base.css" rel="stylesheet" type='text/css' media="all"/>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="bower_lib/respond/dest/respond.js">
+    </script>
+    <script type="text/javascript" charset="UTF-8" src="bower_lib/html5shiv/dist/html5shiv.js">
+    </script>
+    <![endif]-->
+
+</head>
+<body>
+<div>
+
+    <% include  partials/common/editor_model.html %>
+
+</div>
+<div class="footer-container">
+    <% include partials/common/header.html %>
+    <div class="big_logo">
+    <div class="big_logo_iframe">
+        <iframe class="big_logo_iframe" src="../img/logo444.svg" scrolling="no"></iframe>
+    </div>
+    </div>
+
+    <div search-Directive></div>
+    <div class="push"><!-- not put anything here --></div>
+</div>
+<% include partials/common/footer.html %>
+<script src="../flatUI/js/jquery-1.8.3.min.js">
+</script>
+<!--<script src="../bower_lib/bootstrap/js/modal.js">-->
+<!--</script>-->
+<script src="../flatUI/js/jquery-ui-1.10.3.custom.min.js">
+</script>
+<script src="../flatUI/js/jquery.ui.touch-punch.min.js">
+</script>
+<script src="../flatUI/js/bootstrap.min.js">
+</script>
+<script src="../flatUI/js/bootstrap-select.js">
+</script>
+<script src="../flatUI/js/bootstrap-switch.js">
+</script>
+<script src="../flatUI/js/flatui-checkbox.js">
+</script>
+<script src="../flatUI/js/flatui-radio.js">
+</script>
+<script src="../flatUI/js/jquery.tagsinput.js">
+</script>
+<script src="../flatUI/js/jquery.placeholder.js">
+</script>
+<script src="../bower_lib/angular/angular.js">
+</script>
+<script src="../bower_lib/angular-route/angular-route.js">
+</script>
+<script src="../search/app.js">
+</script>
+<script src="../search/js/searchController.js">
+</script>
+<script src="../search/js/searchDirectives.js">
+</script>
+<script type="text/javascript" src="../bower_lib/ng-grid/ng-grid-2.0.7.debug.js">
+</script>
+</body>
+</html>
